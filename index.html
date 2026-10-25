@@ -377,7 +377,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 
 <script>
 (function(){
-  const BOOK = "https://squareup.com/appointments/book/ZTCCTZCVPPEGM";
+  const BOOK = "https://book.squareup.com/appointments/jxpgyjgybu66dp/location/ZTCCTZCVPPEGM/services?color=94703f&buttonTextColor=fbf8f3&locale=";
   const APP_URL = ""; // enlace .run.app del simulador cuando esté listo
 
   const T = {
@@ -470,7 +470,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     document.documentElement.lang=lang;
     document.querySelectorAll("[data-t]").forEach(el=>{const k=el.dataset.t; if(t[k]!=null) el.textContent=t[k];});
     $("#l-es").setAttribute("aria-pressed",lang==="es"); $("#l-en").setAttribute("aria-pressed",lang==="en");
-    document.querySelectorAll("[data-book]").forEach(a=>a.href=BOOK); $("#privLink").href="privacidad.html?lang="+lang;
+    document.querySelectorAll("[data-book]").forEach(a=>a.href=BOOK+(lang==="en"?"en":"es")); $("#privLink").href="privacidad.html?lang="+lang;
     const sim=$("#simBtn"); if(APP_URL){sim.href=APP_URL; sim.hidden=false; $("#simSoon").hidden=true;} else {sim.hidden=true; $("#simSoon").hidden=false;}
 
     $("#scale").innerHTML=LEVELS.map((c,i)=>`<div style="background:${c};color:${i<6?"#F4EEE6":"#2A211C"}">${i+1}</div>`).join("");
@@ -488,7 +488,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <p class="sum">${esc(p.sum[lang])}</p>
         <p class="desc">${esc(p.desc[lang])}</p>
         <ul>${p.inc.map(x=>`<li>${esc(x[lang])}</li>`).join("")}</ul>
-        <div class="card-foot"><span class="meta">${save}${X?esc(t.quoteTime):esc(t.from)+" "+esc(p.times[len])}</span><a href="${BOOK}" target="_blank" rel="noopener">${esc(t.bookPk)} ${esc(p.name)}</a></div>
+        <div class="card-foot"><span class="meta">${save}${X?esc(t.quoteTime):esc(t.from)+" "+esc(p.times[len])}</span><a href="${BOOK+(lang==="en"?"en":"es")}" target="_blank" rel="noopener">${esc(t.bookPk)} ${esc(p.name)}</a></div>
       </article>`;}).join("");
 
     $("#singles").innerHTML=S.map(s=>{
