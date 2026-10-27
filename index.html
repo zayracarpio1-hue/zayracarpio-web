@@ -157,16 +157,14 @@ section{padding-block:88px}
 .band .paths span{color:var(--band-muted);font-size:15px}
 .band .btn-solid{background:#C9A27E;color:#1A1410;margin-top:34px}
 .band .soon{display:block;margin-top:12px;font-size:13px;color:var(--band-muted)}
-.phone{justify-self:center;width:min(100%,300px);aspect-ratio:9/18.5;border-radius:42px;background:#F4EEE6;border:10px solid #000;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);overflow:hidden;display:flex;flex-direction:column;color:#2A211C}
-.phone .bar{height:26px}
-.phone .ps{padding:10px 18px;display:flex;flex-direction:column;gap:12px;font-size:11px}
-.phone .ps .t{font-family:var(--display);font-size:24px;line-height:1.05;text-align:center}
-.phone .ps .k{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:#94703F;text-align:center}
-.phone .opt{border:1px solid #D9CBB9;border-radius:12px;padding:10px 12px;background:#FBF8F3;display:flex;justify-content:space-between;align-items:center}
-.phone .opt b{font-family:var(--display);font-weight:400;font-size:15px}
-.phone .opt.on{border-color:#94703F;box-shadow:0 0 0 1px #94703F}
-.phone .meter{height:4px;border-radius:4px;background:#E6DACB;overflow:hidden}
-.phone .meter i{display:block;height:100%;width:62%;background:#94703F}
+.simcard{justify-self:center;width:min(100%,400px);background:#F4EEE6;color:#2A211C;border-radius:200px 200px 24px 24px;padding:72px 36px 36px;text-align:center;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.band .simcard .k{max-width:none;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#94703F;font-weight:600;margin:0}
+.simcard ol{list-style:none;margin:28px 0 0;padding:0;text-align:left}
+.simcard li{display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid #E6DACB}
+.simcard li b{font-family:var(--display);font-weight:400;font-size:34px;line-height:1;color:#94703F;min-width:1.6em}
+.simcard li strong{display:block;font-family:var(--display);font-weight:400;font-size:22px;line-height:1.2}
+.simcard li span{display:block;font-size:14px;color:#6E5D50;margin-top:4px;line-height:1.5}
+.band .simcard .sig{color:#2A211C;max-width:none;font-family:var(--script);font-style:italic;font-size:26px;margin:18px 0 0;padding-top:16px;border-top:1px solid #E6DACB}
 
 /* singles */
 .singles{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -307,16 +305,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <a class="btn btn-solid" id="simBtn" href="#" target="_blank" rel="noopener" data-t="simBtn">Probar el simulador</a>
         <span class="soon" id="simSoon" hidden data-t="simSoon">El simulador se abre aquí muy pronto.</span>
       </div>
-      <div class="phone" aria-hidden="true">
-        <div class="bar"></div>
-        <div class="ps">
-          <div class="k">Estudio de visualización</div>
-          <div class="t">Mírate con tu nuevo look</div>
-          <div class="meter"><i></i></div>
-          <div class="opt"><b>Quiero un corte nuevo</b><span>→</span></div>
-          <div class="opt on"><b>Quiero cambiar mi color</b><span>→</span></div>
-          <div class="opt"><b>Quiero cuidar mi cabello</b><span>→</span></div>
-        </div>
+      <div class="simcard">
+        <p class="k" data-t="scK">Así funciona</p>
+        <ol>
+          <li><b>01</b><div><strong data-t="sc1t">Tu foto</strong><span data-t="sc1">Una selfie de frente, con buena luz y el cabello suelto.</span></div></li>
+          <li><b>02</b><div><strong data-t="sc2t">Tu objetivo</strong><span data-t="sc2">Respondes unas preguntas sobre tu cabello y lo que buscas.</span></div></li>
+          <li><b>03</b><div><strong data-t="sc3t">Tu resultado</strong><span data-t="sc3">Ves cómo te quedaría y si es posible en una sesión o por etapas.</span></div></li>
+        </ol>
+        <p class="sig">Zayra Carpio</p>
       </div>
     </div>
   </section>
@@ -389,7 +385,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       lvlA:"Escala de niveles: del 1, negro, al 10, rubio muy claro.",lvlB:"En tu consulta vemos de qué nivel partes y hasta dónde llegar sin dañar tu cabello.",
       procEyebrow:"Cómo trabajo",procTitle:"Tres pasos, siempre en este orden",s1t:"Consulta",s1:"Miramos tu cabello, su historial de color y lo que quieres lograr. Aquí confirmamos el precio final, sin sorpresas.",s2t:"Diseño",s2:"Color, corte o tratamiento hechos para tu rostro, tu tono de piel y tu rutina. Si el cambio es grande, lo planeamos por etapas.",s3t:"Cuidado en casa",s3:"Te vas sabiendo cómo peinarte y qué usar para que el color y el brillo duren hasta tu próxima visita.",
       pkEyebrow:"Paquetes",pkTitle:"Todo incluido, con el precio claro desde el inicio",pkLead:"Elige el largo de tu cabello. Cada paquete incluye consulta, lavado, tratamiento y peinado.",pkNote:"Precios en USD. Si tu cabello es muy denso, confirmamos el precio en la consulta.",imgNote:"Las fotos de largo son ilustrativas.",
-      simEyebrow:"Estudio de visualización",simTitle:"Mírate con tu nuevo look antes de decidir",simLead:"Súbete una foto, cuéntame qué buscas y te muestro cómo te verías. Sin compromiso y desde tu celular.",p1t:"Corte",p1:"Analizo la forma de tu rostro y te propongo tres cortes.",p2t:"Color",p2:"Te digo si tu color es posible en una sesión o por etapas, y cómo se vería.",p3t:"Cuidado",p3:"Frizz, resequedad o caída: el tratamiento que necesita tu cabello.",simBtn:"Probar el simulador",simSoon:"El simulador se abre aquí muy pronto.",
+      simEyebrow:"Estudio de visualización",simTitle:"Mírate con tu nuevo look antes de decidir",simLead:"Súbete una foto, cuéntame qué buscas y te muestro cómo te verías. Sin compromiso y desde tu celular.",p1t:"Corte",p1:"Analizo la forma de tu rostro y te propongo tres cortes.",p2t:"Color",p2:"Te digo si tu color es posible en una sesión o por etapas, y cómo se vería.",p3t:"Cuidado",p3:"Frizz, resequedad o caída: el tratamiento que necesita tu cabello.",simBtn:"Probar el simulador",simSoon:"El simulador se abre aquí muy pronto.",scK:"Así funciona",sc1t:"Tu foto",sc1:"Una selfie de frente, con buena luz y el cabello suelto.",sc2t:"Tu objetivo",sc2:"Respondes unas preguntas sobre tu cabello y lo que buscas.",sc3t:"Tu resultado",sc3:"Ves cómo te quedaría y si es posible en una sesión o por etapas.",
       cutEyebrow:"Cortes y blower",cutTitle:"Un corte pensado para tu rostro y tu rutina",cutLead:"Si solo vienes por un corte o un blower, estas son las opciones. Los precios del corte de diseño cambian según tu largo.",
       polEyebrow:"Antes de reservar",polTitle:"Lo que necesitas saber",q1t:"Consulta gratis",q1:"Todo servicio de color empieza con una consulta. Ahí confirmamos el precio final según tu cabello y el resultado que quieres.",q2t:"Depósito de $30",q2:"Asegura tu cita y se descuenta del total de tu servicio. No es reembolsable en ningún caso.",q3t:"Reprogramar o cancelar",q3:"Puedes reprogramar avisando con al menos 24 horas de anticipación. Si no te presentas o reprogramas con menos de 24 horas, pierdes el depósito de $30.",
       callT:"Para cualquier duda, llámanos",callP:"No respondemos consultas por mensaje ni por redes sociales. Llámanos y te atendemos personalmente.",
@@ -404,7 +400,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       lvlA:"Color level scale: from 1, black, to 10, lightest blonde.",lvlB:"At your consultation we see which level you start from and how far to go without damaging your hair.",
       procEyebrow:"How I work",procTitle:"Three steps, always in this order",s1t:"Consultation",s1:"We look at your hair, its color history and what you want to achieve. This is where we confirm your final price, with no surprises.",s2t:"Design",s2:"Color, cut or treatment made for your face, skin tone and routine. If it's a big change, we plan it in stages.",s3t:"Home care",s3:"You leave knowing how to style your hair and what to use so your color and shine last until your next visit.",
       pkEyebrow:"Packages",pkTitle:"All-inclusive, with clear pricing from the start",pkLead:"Choose your hair length. Every package includes a consultation, wash, treatment and styling.",pkNote:"Prices in USD. For very thick hair, we confirm the price at your consultation.",imgNote:"Length photos are illustrative.",
-      simEyebrow:"Visualization studio",simTitle:"See your new look before you decide",simLead:"Upload a photo, tell me what you're looking for and I'll show you how you'd look. No commitment, right from your phone.",p1t:"Cut",p1:"I analyze your face shape and suggest three cuts.",p2t:"Color",p2:"I tell you whether your color is possible in one session or in stages, and how it would look.",p3t:"Care",p3:"Frizz, dryness or shedding: the treatment your hair needs.",simBtn:"Try the simulator",simSoon:"The simulator will open here very soon.",
+      simEyebrow:"Visualization studio",simTitle:"See your new look before you decide",simLead:"Upload a photo, tell me what you're looking for and I'll show you how you'd look. No commitment, right from your phone.",p1t:"Cut",p1:"I analyze your face shape and suggest three cuts.",p2t:"Color",p2:"I tell you whether your color is possible in one session or in stages, and how it would look.",p3t:"Care",p3:"Frizz, dryness or shedding: the treatment your hair needs.",simBtn:"Try the simulator",simSoon:"The simulator will open here very soon.",scK:"How it works",sc1t:"Your photo",sc1:"A front-facing selfie in good light, with your hair down.",sc2t:"Your goal",sc2:"Answer a few questions about your hair and what you want.",sc3t:"Your result",sc3:"See how it would look and whether it is possible in one session or in stages.",
       cutEyebrow:"Cuts and blowouts",cutTitle:"A cut designed for your face and your routine",cutLead:"If you're only coming in for a cut or a blowout, these are your options. Signature cut prices depend on your length.",
       polEyebrow:"Before you book",polTitle:"What you need to know",q1t:"Free consultation",q1:"Every color service starts with a consultation, where we confirm your final price based on your hair and the result you want.",q2t:"$30 deposit",q2:"Secures your appointment and is applied to your service total. Non-refundable in all cases.",q3t:"Rescheduling or canceling",q3:"You can reschedule with at least 24 hours' notice. If you don't show up or reschedule with less than 24 hours' notice, you lose your $30 deposit.",
       callT:"Questions? Please call us",callP:"We don't answer inquiries by text or social media. Give us a call and we'll help you personally.",
